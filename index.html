@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Passo Compasso — organize seus estudos, acompanhe seu ritmo e avance um passo por vez." />
+    <meta name="theme-color" content="#202632" />
+    <title>Passo Compasso · Dashboard de estudos</title>
+    <link rel="stylesheet" href="css/styles.css?v=passo-rooms" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="Navegação principal">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true"><img src="assets/logo-passo-compasso.png" alt="" /></div>
+          <div>
+            <strong>Passo <em>Compasso</em></strong>
+            <small>ritmo local de estudos</small>
+          </div>
+        </div>
+
+        <div class="sidebar-label">Espaço de estudo</div>
+        <nav class="primary-nav" id="primaryNav"></nav>
+
+        <div class="sidebar-footer">
+          <div class="local-badge"><span class="status-dot"></span><span>Dados neste navegador</span></div>
+          <button class="profile-mini" data-section="profile" aria-label="Abrir perfil">
+            <span class="avatar avatar-small" id="sidebarAvatar">R</span>
+            <span class="profile-mini-copy"><strong id="sidebarName">Rafa</strong><small>Perfil local</small></span>
+            <span class="nav-chevron" aria-hidden="true">›</span>
+          </button>
+        </div>
+      </aside>
+
+      <div class="mobile-topbar">
+        <button class="icon-button" id="mobileMenuButton" aria-label="Abrir menu" aria-expanded="false">
+          <span class="hamburger-lines" aria-hidden="true"></span>
+        </button>
+        <div class="mobile-brand"><span class="brand-mark brand-mark-small"><img src="assets/logo-passo-compasso.png" alt="" /></span><strong>Passo Compasso</strong></div>
+        <button class="icon-button" data-section="settings" aria-label="Abrir configurações">⚙</button>
+      </div>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow" id="sectionEyebrow">VISÃO GERAL</p>
+            <h1 id="sectionTitle">Início</h1>
+          </div>
+          <div class="topbar-actions">
+            <div class="top-search"><span aria-hidden="true">⌕</span><input aria-label="Buscar no dashboard" placeholder="Buscar" /><kbd>Ctrl /</kbd></div>
+            <div class="local-status"><span class="status-dot"></span> Salvo localmente</div>
+            <button class="icon-button theme-toggle" data-action="toggle-theme" aria-label="Alternar tema">◐</button>
+            <button class="avatar avatar-small top-avatar" data-section="profile" id="topAvatar" aria-label="Abrir perfil">R</button>
+            <button class="button button-quiet button-small logout-button" data-action="logout" type="button">Sair</button>
+          </div>
+        </header>
+
+        <div class="content-scroll" id="app" tabindex="-1"></div>
+      </main>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navegação rápida"></nav>
+    <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+    <div class="modal-root" id="modalRoot" aria-hidden="true"></div>
+    <div class="sr-only" id="liveRegion" aria-live="polite"></div>
+
+    <section class="auth-overlay" id="authOverlay" aria-labelledby="loginTitle" hidden>
+      <div class="auth-visual" aria-hidden="true">
+        <div class="auth-visual-brand"><span class="brand-mark"><img src="assets/logo-passo-compasso.png" alt="" /></span><strong>Passo Compasso</strong></div>
+        <div class="auth-visual-copy"><p class="eyebrow">SEU RITMO DE ESTUDO</p><h2>Um passo de cada vez.<br><em>Sem perder o compasso.</em></h2><p>Organize suas matérias, encontre seu próximo foco e acompanhe o que realmente avançou.</p></div>
+        <span class="auth-orbit orbit-one"></span><span class="auth-orbit orbit-two"></span>
+      </div>
+      <div class="auth-card">
+        <div class="auth-brand"><div class="brand-mark"><img src="assets/logo-passo-compasso.png" alt="" /></div><div><strong>Passo Compasso</strong><small>seu ritmo, seu próximo passo</small></div></div>
+        <p class="eyebrow">ENTRAR NO SEU ESPAÇO</p>
+        <h1 id="loginTitle">Vamos no seu compasso.</h1>
+        <p class="auth-copy">Uma simulação de login para a versão beta. Nada é enviado para um servidor.</p>
+        <form id="loginForm" class="form-stack">
+          <div class="field"><label for="loginName">Como podemos chamar você?</label><input id="loginName" name="name" placeholder="Ex.: Rafa" maxlength="40" required /></div>
+          <div class="field"><label for="loginEmail">E-mail</label><input id="loginEmail" name="email" type="email" placeholder="voce@exemplo.com" required /></div>
+          <div class="field"><label for="loginPassword">Senha</label><input id="loginPassword" name="password" type="password" placeholder="••••••••" minlength="4" required /></div>
+          <label class="check-row"><input type="checkbox" name="remember" checked /> Lembrar neste navegador</label>
+          <button class="button button-primary auth-submit" type="submit">Entrar no dashboard</button>
+        </form>
+        <p class="auth-note"><span class="status-dot"></span> Login demonstrativo local · sem conta real</p>
+      </div>
+    </section>
+
+    <script src="js/app.js?v=rooms-entry-2" defer></script>
+  </body>
+</html>
